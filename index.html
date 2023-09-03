@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>首页</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src=utils.js></script> 
+<meta charset="UTF-8">
+</head>
+
+<script>
+	document.cookie = "";
+	// 检测用户代理
+	var userAgent = navigator.userAgent;
+	// 定义一个正则表达式来匹配常见的移动设备用户代理
+	var mobileUserAgentPattern = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+	// 检查是否是移动设备
+	if (mobileUserAgentPattern.test(userAgent)) {
+  		// 重定向到移动设备页面
+		window.location.href = 'mobile.html';
+	}
+	else
+	{
+		var username = findCookie('username');
+		if(username == null)
+		{
+			var username = prompt("请输入你的昵称");
+			document.cookie = "username=" + username;
+		}
+	}
+</script>
+
+<body>
+	<div class="container">
+        <!-- 左侧导航栏 -->
+        <nav class="sidebar">
+            <ul>
+                <li><a href="level00.html" id="00">level00</a></li>
+                <li><a href="level01.html" id="01">level01</a></li>
+                <li><a href="level02.html" id="02">level02</a></li>
+				<li><a href="level03.html" id="03">level03</a></li>
+                <li><a href="level04.html" id="04">level04</a></li>
+                <li><a>level05</a></li>
+				<li><a>level06</a></li>
+                <li><a>level07</a></li>
+                <li><a>level08</a></li>
+            </ul>
+        </nav>
+
+        <!-- 右侧内容区域 -->
+        <div class="content">
+			<div id="welcome">
+				<h1 style="font-size:40px;text-align: center;"> Hello, world! </h1>
+				
+			</div>
+        </div>
+    </div>
+</body>
+
+<script>
+	document.getElementById("welcome").innerHTML += '<h1 style="font-size:40px;text-align: center;"> Hello, ' + username + '! </h1>';
+	for(var i = 0; i <= 4; i = i + 1)
+	{
+		var tmp = document.getElementById("0" + i);
+		if(findCookie('level0' + i) == "true")
+		{
+			tmp.innerHTML += '√';
+		}
+	}
+</script>
+
+</html>

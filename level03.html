@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>level03</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<meta charset="UTF-8">
+</head>
+
+<script>
+    function leave(x)
+    {
+        x.style.top = (parseInt(x.style.top) + 80) % 600 + "px";
+        x.style.left = (parseInt(x.style.left) + 200) % 1000 + "px";
+    }
+    function flag()
+    {
+	    setCookie("flag03", "true");
+       	window.location.href = "flag03.php";
+    }
+</script>
+
+<body>
+    <h1> level03 </h1>
+    <button onmouseover="leave(this)" class="flag" id="flag03"> 点击不能查看flag </button>
+    <button onclick="window.location.href='index.html'" class="ret"> 返回 </button>
+    <!-- 提交模块 -->
+    <form name="input" action="flag.php" method="get">
+    <input type="text" name="flag03">
+    <input type="submit" value="Submit">
+    <br>
+    输入得到的flag通关
+    </form>
+</body>
+
+<script>
+	var b = document.getElementById("flag03");
+	b.style.top = "300px";
+	b.style.left = "500px";
+</script>
+
+<script src=utils.js></script>
+
+</html>

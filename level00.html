@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>level00</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<meta charset="UTF-8">
+</head>
+
+<script>
+    function flag()
+    {
+       	alert("flag is {送分题}");
+    }
+</script>
+
+<body>
+    <h1> level00 </h1>
+    <button onclick="flag()" class="flag" id="flag00"> 点击查看flag </button>
+    <button onclick="window.location.href='index.html'" class="ret"> 返回 </button>
+    <!-- 提交模块 -->
+    <form name="input" action="flag.php" method="get">
+    <input type="text" name="flag00">
+    <input type="submit" value="Submit">
+    <br>
+    输入得到的flag通关
+    </form>
+</body>
+
+<script>
+	var b = document.getElementById("flag00");
+	b.style.top = "300px";
+	b.style.left = "500px";
+</script>
+</html>
