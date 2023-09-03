@@ -74,5 +74,19 @@
             echo "<script> alert('失败') </script>";
         }
     }
-    
+    else if(isset($_GET['flag05']))
+    {
+        $submit = $_GET['flag05'];
+        if($submit == "修改HTML")
+        {
+            setcookie("level05", "true");
+            require 'index.html';
+            echo "<script> alert('成功') </script>";
+        }
+        else
+        {
+            require 'level05.html';
+            echo "<script> alert('失败') </script>";
+        }
+    }
 ?>
