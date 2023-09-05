@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>level06</title>
+<meta charset="UTF-8">
+</head>
+<body>
+    <h1>验证码示例</h1>
+    <img id="captcha" src="captcha.php" alt="验证码">
+    <form name="input" action="flag06.php" method="post">
+    <input type="text" name="msg">
+    <input type="submit" value="Submit">
+    <br>
+    输入验证码取得flag
+    </form>
+    <br><br>
+
+    <!-- 提交模块 -->
+    <form name="input" action="flag.php" method="get">
+    <input type="text" name="flag06">
+    <input type="submit" value="Submit">
+    <br>
+    输入得到的flag通关
+    </form>
+</body>
+</html>

@@ -40,7 +40,7 @@
 				<li><a href="level03.html" id="03">level03</a></li>
                 <li><a href="level04.html" id="04">level04</a></li>
                 <li><a href="level05.html" id="05">level05</a></li>
-				<li><a>level06</a></li>
+				<li><a href="level06.html" id="06">level06</a></li>
                 <li><a>level07</a></li>
                 <li><a>level08</a></li>
             </ul>
@@ -58,7 +58,7 @@
 
 <script>
 	document.getElementById("welcome").innerHTML += '<h1 style="font-size:40px;text-align: center;"> Hello, ' + username + '! </h1>';
-	for(var i = 0; i <= 5; i = i + 1)
+	for(var i = 0; i <= 6; i = i + 1)
 	{
 		var tmp = document.getElementById("0" + i);
 		if(findCookie('level0' + i) == "true")
