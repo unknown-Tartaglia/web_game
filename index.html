@@ -8,7 +8,6 @@
 </head>
 
 <script>
-	document.cookie = "";
 	// 检测用户代理
 	var userAgent = navigator.userAgent;
 	// 定义一个正则表达式来匹配常见的移动设备用户代理
@@ -24,7 +23,7 @@
 		if(username == null)
 		{
 			var username = prompt("请输入你的昵称");
-			document.cookie = "username=" + username;
+			setCookie("username", username);
 		}
 	}
 </script>
@@ -41,7 +40,7 @@
                 <li><a href="level04.html" id="04">level04</a></li>
                 <li><a href="level05.html" id="05">level05</a></li>
 				<li><a href="level06.html" id="06">level06</a></li>
-                <li><a>level07</a></li>
+                <li><a href="level07.html" id="07">level07</a></li>
                 <li><a>level08</a></li>
             </ul>
         </nav>
@@ -58,7 +57,7 @@
 
 <script>
 	document.getElementById("welcome").innerHTML += '<h1 style="font-size:40px;text-align: center;"> Hello, ' + username + '! </h1>';
-	for(var i = 0; i <= 6; i = i + 1)
+	for(var i = 0; i <= 7; i = i + 1)
 	{
 		var tmp = document.getElementById("0" + i);
 		if(findCookie('level0' + i) == "true")

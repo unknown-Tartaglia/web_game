@@ -12,5 +12,10 @@ function findCookie(name)
 
 function setCookie(name, value)
 {
-    document.cookie = name + "=" + value;
+    var date = new Date();
+    // 将过期时间设置为 30天 后
+    date.setTime(date.getTime() + (30 * 24 * 60 * 60 * 1000)); // 30天的毫秒数
+
+    var expires = "; expires=" + date.toUTCString();
+    document.cookie = name + "=" + value + expires + "; path=/";
 }
