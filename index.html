@@ -24,7 +24,10 @@
 		{
 			var username = prompt("请输入你的昵称");
 			setCookie("username", username);
+			window.location.href = 'db_register.php';
 		}
+		else if(findCookie('loaded') == null)
+			window.location.href = 'db_load.php';
 	}
 </script>
 
